@@ -1,0 +1,5 @@
+import data_managment_functions
+import data_managment_functions as data_managment
+
+data_managment_functions.actualize()
+
