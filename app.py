@@ -1,5 +1,4 @@
 import pandas
-
 import Probability_sesonal_pattern as probanility
 import Cumulative_Sesonal_pattern as cumulative
 import dash
