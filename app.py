@@ -80,7 +80,7 @@ def update_charts(value):
        ])
     return children
 
-@app.route('/')
+
 if __name__=="__main__":
     app.run_server()
 
