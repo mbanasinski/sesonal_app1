@@ -18,6 +18,7 @@ plotly.offline.plot(fig, filename='fig.html')
 
 instrument = 'Gold'
 app = dash.Dash()
+server = app.server
 Years = [10 , 30]
 df = pandas.DataFrame(Years, columns=['Years'])
 app.layout = html.Div([
@@ -42,11 +43,6 @@ app.layout = html.Div([
 
 
 ])
-
-
-
-#def update_figure():
-
 
 @app.callback(
     Output(component_id='charts', component_property='children'),
