@@ -31,11 +31,11 @@ app.layout = html.Div([
         )
     )    ,
     html.Div(
-            children=html.Div([''' 
+            children=html.Div([
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(instrument)), id='aaa' ),
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_30(instrument) )),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_20(instrument))),
-            html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),'''
+            html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),
        ])
     , id='charts')
 
@@ -48,10 +48,9 @@ app.layout = html.Div([
 
 #def update_figure():
 
-'''
+
 @app.callback(
     Output(component_id='charts', component_property='children'),
-    #Input(component_id='time_Dropdown', component_property='value'),
     Input(component_id='Instrument_Dropdown', component_property='value'))
 
 
@@ -64,24 +63,10 @@ def update_charts(value):
             html.Div(dcc.Graph(figure=data_managment.fig_probability_60(str(value))))
        ])
     return children
- '''
+
 if __name__=="__main__":
     app.run_server()
 
 
 
 
-'''
-def update_output_div(input_value):
-    return f'Output: {input_value}
-To jest stary div z Id dla karzdego wykresu osobo
-html.Div(
-        html.Div(dcc.Graph(id="cumulativeChart"   , figure=data_managment.fig_cumulative_30(instrument) )),
-        html.Div(dcc.Graph(id="probability_20_Chart",figure=data_managment.fig_probability_20(instrument))),
-        html.Div(dcc.Graph(id="probability_60 Chart", figure=data_managment.fig_probability_60(instrument))),
-
-
-            id='charts' )
-
-
-'''
