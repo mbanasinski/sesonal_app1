@@ -31,11 +31,11 @@ app.layout = html.Div([
         )
     )    ,
     html.Div(
-            children=html.Div([
+            children=html.Div([''' 
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(instrument)), id='aaa' ),
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_30(instrument) )),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_20(instrument))),
-            html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),
+            html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),'''
        ])
     , id='charts')
 
@@ -80,9 +80,9 @@ def update_charts(value):
        ])
     return children
 
-
 if __name__=="__main__":
     app.run_server()
+
 
 
 
