@@ -10,7 +10,7 @@ from dash.dependencies import Output, Input
 import plotly.express as px
 import pandas as pd
 import data_managment_functions as data_managment
-import searhbestopportunity as searh
+#import searhbestopportunity as searh
 ''' 
 df = pd.read_pickle("dafr.pkl")
 fig = px.line(df, x='Data', y='Close' ,title='Stock chart')
@@ -33,8 +33,8 @@ app.layout = html.Div([
     )    ,
     html.Div(
             children=html.Div([
-            html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(instrument)), id='aaa' ),
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_30(instrument) )),
+            html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(instrument)), id='aaa' ),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_20(instrument))),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),
        ])
@@ -53,8 +53,8 @@ app.layout = html.Div([
 
 def update_charts(value):
     children =html.Div([
-            html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(str(value)))),
             html.Div(dcc.Graph(figure=data_managment.fig_cumulative_30(str(value)))),
+            html.Div(dcc.Graph(figure=data_managment.fig_cumulative_10(str(value)))),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_20(str(value)))),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_60(str(value))))
        ])
