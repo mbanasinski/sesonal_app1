@@ -17,7 +17,7 @@ plotly.offline.plot(fig, filename='fig.html')
 '''
 
 instrument = 'Gold'
-app = dash.Dash()
+app = dash.Dash(__name__)
 server = app.server
 Years = [10 , 30]
 df = pandas.DataFrame(Years, columns=['Years'])
