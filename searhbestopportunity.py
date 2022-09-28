@@ -10,10 +10,6 @@ with open("listadniwroku.txt", "r") as f:
         score.append(line.strip())
 lista_dni_w_roku = score
 
-
-
-
-
 def list_of_opportunities_20(data):
     list_of_opportunities = []
     d = lista_dni_w_roku.index(data)
@@ -50,19 +46,4 @@ def print_opportunities_20(data):
 
 
 
-''' 
-print('kkk')
-print(list_of_opportunities_20('12.31'))
-
-print_opportunities_20('12.31')
-print('''                         
-
-k
-''')
-
-for data in lista_dni_w_roku:
-    print('--------',data ,'--------')
-    print_opportunities_20(data)
-
-'''
 
