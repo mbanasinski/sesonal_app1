@@ -91,6 +91,17 @@ def wykres_probability_Yahoo(ticker, start_date, days_in_position):
 
     lista_dni_w_roku =  list_of_days_in_year_probability(btc_price)
 
+
+    ####Utworzyłem plik z listy dni w roku
+    '''
+    ###################################################
+    with open("listadniwroku.txt", 'w') as f:
+        for s in lista_dni_w_roku:
+            f.write(str(s) + '\n')
+    #####################################################
+    '''
+
+
     def addig_dates_of_days_to_df_probability(df_of_prices, list_of_days):
         df_of_prices['dzien_roku'] = list_of_days
         return df_of_prices
@@ -355,4 +366,5 @@ def wykres_probability_Stooq(ticker, start_date, days_in_position):
 
 #aaa = wykres_probability_Yahoo(ticker, start_date, dni_w_pozycji)
 #aaa.show()
+
 
