@@ -22,7 +22,7 @@ server = app.server
 Years = [10 , 30]
 df = pandas.DataFrame(Years, columns=['Years'])
 app.layout = html.Div([
-    html.H1(children="MARKET SESONALITY...", id='header'),
+    html.H1(children="MARKET SESONALITY..", id='header'),
     html.Label("Select an instrument"),
     html.Div(
         dcc.Dropdown(
