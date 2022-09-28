@@ -10,6 +10,7 @@ from dash.dependencies import Output, Input
 import plotly.express as px
 import pandas as pd
 import data_managment_functions as data_managment
+import searhbestopportunity as searh
 ''' 
 df = pd.read_pickle("dafr.pkl")
 fig = px.line(df, x='Data', y='Close' ,title='Stock chart')
