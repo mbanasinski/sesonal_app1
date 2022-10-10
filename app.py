@@ -23,7 +23,7 @@ server = app.server
 Years = [10 , 30]
 df = pandas.DataFrame(Years, columns=['Years'])
 app.layout = html.Div([
-    html.H1(children="MARKET SESONALITY", id='header'),
+    html.H1(children="MARKET SESONALITY...", id='header'),
     html.P(children='sell may and go away...', id='motto'),
     html.Label("Select an instrument"),
     html.Div(
