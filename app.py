@@ -23,7 +23,7 @@ server = app.server
 Years = [10 , 30]
 df = pandas.DataFrame(Years, columns=['Years'])
 app.layout = html.Div([
-    html.H1(children="MARKET SESONALITY...", id='header'),
+    html.H1(children="MARKET SESONALITY.", id='header'),
     html.P(children='sell may and go away...', id='motto'),
     html.Label("Select an instrument"),
     html.Div(
@@ -39,11 +39,18 @@ app.layout = html.Div([
             html.Div(dcc.Graph(figure=data_managment.fig_probability_20(instrument))),
             html.Div(dcc.Graph(figure=data_managment.fig_probability_60(instrument))),
        ])
-    , id='charts')
+    , id='charts'),
+    html.Br(),
+    html.Div(
+        [
+        html.P('Copyright 2022 by Michał Banasiński.' , id="stopka"),
+        html.P(
+            html.A("Author's GitHub Prifile",href="https://github.com/mbanasinski"  , id='hh')
+         ,id='linkstopki'
+        )]
 
 
-
-
+    )
 ])
 
 @app.callback(
